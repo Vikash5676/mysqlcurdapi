@@ -1,7 +1,8 @@
+// install express with `npm install express` 
 const express=require("express");
 const app=express();
-const port=process.env.PORT || 5001
-const User=require("./first_micro/model/user");
+
+const User=require("./model/user");
 
 
 app.use(express.json());
@@ -109,6 +110,5 @@ app.post("/",async(req,res)=>{
 })
 
 
-app.listen(port,async()=>{
-console.log("Server is up at port "+port )
-})
+// export 'app'
+module.exports = app
